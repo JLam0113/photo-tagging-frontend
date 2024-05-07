@@ -45,3 +45,17 @@
   height: auto;
   width: 100%;
 }
+
+.dropdown {
+  position: absolute;
+  background-color: black;
+  color: white;
+}
+
+ol {
+  padding-left: 25px;
+}
+
+li {
+  padding: 5px;
+}
