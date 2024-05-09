@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import image from './assets/qnbe.png'
 import pin from './assets/pin.png'
 import Dropdown from './components/dropdown'
@@ -11,6 +11,36 @@ function App() {
   const [lambo, setLambo] = useState(false)
   const [ipin, setIpin] = useState(false)
   const [markers, setMarkers] = useState([]);
+/*   const [user, setUser] = useState();
+
+  useEffect(() => {
+    const startTimer = async (url) => {
+      await fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          setUser(data.id)
+        })
+    }
+    startTimer('http://localhost:3000/user')
+  }, []);
+
+  const allFound = async () => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        user: user,
+      }),
+    }
+    const endTimer = async (url) => {
+      await fetch(url, requestOptions)
+        .then((response) => response.json())
+        .then((data) => {
+          
+        })
+    }
+    endTimer('http://localhost:3000/user')
+  } */
 
   const dropdownClick = async (e) => {
     let character = e.target.id;
@@ -42,6 +72,7 @@ function App() {
             }
             setDropdown(false)
             setMarkers((markers) => [...markers, { x: coordinates[0], y: coordinates[1] }]);
+            //if (gon && lambo && ipin) allFound()
           }
         })
     } catch (err) {
