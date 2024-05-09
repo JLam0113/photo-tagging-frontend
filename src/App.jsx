@@ -11,6 +11,8 @@ function App() {
   const [lambo, setLambo] = useState(false)
   const [ipin, setIpin] = useState(false)
   const [markers, setMarkers] = useState([]);
+
+  // TODO for annonymous scoreboard
 /*   const [user, setUser] = useState();
 
   useEffect(() => {
