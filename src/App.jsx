@@ -8,13 +8,13 @@ function App() {
   const [coordinates, setCoordinates] = useState([])
 
   const handleClick = (e) => {
-    setDropdown(true);
-    setCoordinates([e.clientX, e.clientY]);
+    if(!dropdown) setDropdown(true);
+    setCoordinates([e.pageX, e.pageY]);
   }
 
   return (
     <>
-      <img src={image} className="img" alt="Background" onClick={handleClick} />
+      <img id="image" src={image} className="img" alt="Background" onClick={handleClick} />
       {dropdown ? <Dropdown x={coordinates[0]} y={coordinates[1]}></Dropdown> : ''}
     </>
   )

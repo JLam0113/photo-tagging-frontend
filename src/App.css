@@ -44,6 +44,8 @@
 .img {
   height: auto;
   width: 100%;
+  min-width: 1890px;
+  min-height: 821px;
 }
 
 .dropdown {
